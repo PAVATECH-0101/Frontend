@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+  }
+  
+  .logo h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+  }
+  
+  .nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-links a:hover {
+    color: #dc2626;
+  }
+  
