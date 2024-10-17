@@ -7,13 +7,13 @@ const Home = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`/api/route-suggestions?destination=${destination}`);
-      console.log(response.data); // Handle the response as needed
+      const response = await axios.get(`/api/route-suggestions?destination=${destination}&apiKey=${process.env.REACT_APP_API_KEY}`);
+      console.log(response.data);
     } catch (error) {
       console.error('Error fetching route suggestions', error);
     }
   };
-
+  
   return (
     <div className="home-container" style={{ backgroundImage: 'url("/path-to-your-background.jpg")' }}>
       <div className="overlay">
