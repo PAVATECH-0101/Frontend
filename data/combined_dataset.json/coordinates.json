@@ -1,0 +1,56 @@
+import json
+import os
+
+# Load GeoJSON data
+geojson_path = '../data/buildings.geojson'  # Adjust path if needed
+
+if not os.path.exists(geojson_path):
+    print(f"Error: The file {geojson_path} does not exist.")
+    exit(1)
+
+try:
+    with open(geojson_path, 'r') as geojson_file:
+        geojson_data = json.load(geojson_file)
+except json.JSONDecodeError as e:
+    print(f"Error decoding JSON: {e}")
+    exit(1)
+
+# Extract coordinates and relevant properties
+coordinates_data = []
+
+for feature in geojson_data['features']:
+    coords = feature['geometry']['coordinates']  # Extract coordinates
+    properties = feature['properties']  # Extract properties
+    
+    # Ensure coordinates are in the correct format
+    if feature['geometry']['type'] == 'Point':
+        # For Point geometry, we expect a single coordinate pair
+        coord_entry = {
+            'lat': coords[1],  # Latitude is the second element
+            'lon': coords[0],  # Longitude is the first element
+        }
+    elif feature['geometry']['type'] in ['LineString', 'Polygon']:
+        # For LineString or Polygon geometry, we can use the first coordinate as a representative point
+        coord_entry = {
+            'lat': coords[0][1],  # Use the first coordinate's latitude
+            'lon': coords[0][0],  # Use the first coordinate's longitude
+        }
+    else:
+        print(f"Unsupported geometry type: {feature['geometry']['type']}")
+        continue  # Skip unsupported geometry types
+
+    # Create a coordinate entry with properties
+    coordinate_entry = {
+        'coordinates': coord_entry,  # Use the formatted coordinates
+        'name': properties.get('name', 'Unnamed'),
+        'address': properties.get('address', 'No Address'),
+        'height': properties.get('height', 'Unknown')
+    }
+    coordinates_data.append(coordinate_entry)
+
+# Save extracted data to coordinates.json
+output_path = '../data/coordinates.json'  # Adjust path if needed
+with open(output_path, 'w') as coordinates_file:
+    json.dump(coordinates_data, coordinates_file, indent=2)
+
+print(f"Coordinates have been saved to {output_path}")
