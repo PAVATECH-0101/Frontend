@@ -56,14 +56,14 @@ def fetch_data_for_coordinate(coord):
         return  # Skip to the next coordinate on error
 
     # Save the result to a GeoJSON file
-    filename = f"data/accessibility_{coord['lat']}_{coord['lon']}.geojson"
+    filename = os.path.join(base_path, f"data/accessibility_{coord['lat']}_{coord['lon']}.geojson")
     with open(filename, 'w') as geojson_file:
         json.dump(response.json(), geojson_file)
     print(f"Accessibility data (buildings, sidewalks, ramps) saved to {filename}")
 
 # Loop through each coordinate and fetch data with a delay to prevent rate-limiting
 for coord in coordinates:
-    fetch_data_for_coordinate(coord)
+    fetch_data_for_coordinate(coord['coordinates'])
     # Adding a delay between requests to avoid hitting rate limits
     time.sleep(5)
 
@@ -105,5 +105,5 @@ def clean_geojson_data(file_path):
 
 # After fetching all coordinates, clean the GeoJSON files
 for coord in coordinates:
-    geojson_file_path = f"data/accessibility_{coord['lat']}_{coord['lon']}.geojson"
+    geojson_file_path = os.path.join(base_path, f"data/accessibility_{coord['lat']}_{coord['lon']}.geojson")
     clean_geojson_data(geojson_file_path)

@@ -8,12 +8,24 @@ if not os.path.exists(geojson_path):
     print(f"Error: The file {geojson_path} does not exist.")
     exit(1)
 
+# Read the file content and print it for debugging
 try:
     with open(geojson_path, 'r') as geojson_file:
-        geojson_data = json.load(geojson_file)
-except json.JSONDecodeError as e:
-    print(f"Error decoding JSON: {e}")
+        content = geojson_file.read()
+        print(f"Content of the file:\n{content}")  # Print content
+        geojson_data = json.loads(content)  # Change this line for better debugging
+except FileNotFoundError:
+    print(f"Error: The file {geojson_path} does not exist.")
     exit(1)
+except json.JSONDecodeError as e:
+    print(f"Error decoding JSON: {e} - Content was: '{content}'")
+    exit(1)
+
+# Continue with processing...
+
+
+# Proceed with the rest of your code...
+
 
 # Extract coordinates and relevant properties
 coordinates_data = []
@@ -24,13 +36,11 @@ for feature in geojson_data['features']:
     
     # Ensure coordinates are in the correct format
     if feature['geometry']['type'] == 'Point':
-        # For Point geometry, we expect a single coordinate pair
         coord_entry = {
             'lat': coords[1],  # Latitude is the second element
             'lon': coords[0],  # Longitude is the first element
         }
     elif feature['geometry']['type'] in ['LineString', 'Polygon']:
-        # For LineString or Polygon geometry, we can use the first coordinate as a representative point
         coord_entry = {
             'lat': coords[0][1],  # Use the first coordinate's latitude
             'lon': coords[0][0],  # Use the first coordinate's longitude
