@@ -1,42 +1,68 @@
+/* Home container */
 .home-container {
-    position: relative;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color:#cbd5e1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .home-content {
-    text-align: center;
-    color: #475569;
-  }
-  
-  .input-field {
-    padding: 10px;
-    margin-top: 20px;
-    width: 250px;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .search-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #e63946;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack content vertically */
+}
+
+/* Home content heading */
+.home-content h1 {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+/* Home content subheading */
+.home-content h2 {
+  font-weight: bold; /* Makes the text bold */
+  font-size: 24px;
+  color: black; /* Adjusts the font color */
+}
+
+/* Home content paragraph */
+.home-content p {
+  font-weight: large; /* Makes the paragraph bold */
+  font-size: 24px; /* Adjusts the font size for the paragraph */
+  color: #7c3549;
+}
+
+/* Input field styling */
+.input-field {
+  padding: 10px;
+  margin-top: 20px;
+  width: 250px; /* Input field width */
+  border: none;
+  border-radius: 5px;
+}
+
+/* Search button styling */
+.search-button {
+  padding: 12px 20px; /* Adjusted padding */
+  margin-top: 10px;
+  background-color: #6E3640;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.search-button:hover {
+  background-color: #951c1c; /* Changes color on hover */
+}

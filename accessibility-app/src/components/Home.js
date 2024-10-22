@@ -6,20 +6,26 @@ const Home = () => {
   const [destination, setDestination] = useState('');
 
   const handleSearch = async () => {
+    if (!destination) {
+      alert('Please enter a destination');
+      return; // Prevent the request if no destination is provided
+    }
+    
     try {
       const response = await axios.get(`/api/route-suggestions?destination=${destination}&apiKey=${process.env.REACT_APP_API_KEY}`);
       console.log(response.data);
+      // Handle response data here (e.g., updating state to display results)
     } catch (error) {
       console.error('Error fetching route suggestions', error);
+      alert('Failed to fetch route suggestions. Please try again later.'); // User feedback on error
     }
   };
-  
+
   return (
     <div className="home-container" style={{ backgroundImage: 'url("/path-to-your-background.jpg")' }}>
       <div className="overlay">
         <div className="home-content">
-          <h1>Experience the most accessible routes in the city</h1>
-          <p>Find routes tailored to your accessibility needs</p>
+          <p>Locate routes customized to meet your accessibility requirements.</p>
           <input
             type="text"
             value={destination}
@@ -35,3 +41,4 @@ const Home = () => {
 };
 
 export default Home;
+

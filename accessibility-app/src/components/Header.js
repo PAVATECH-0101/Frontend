@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'; // Assuming we have a CSS file for styling
+import logo from '../images/logo.png'; // Correct path to the logo
 
 const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <h1>Access</h1>
+        <img src={logo} alt="Logo" className="logo-img" />
       </div>
       <nav className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/route-suggestions">Route Suggestions</Link>
-        <Link to="/about">About Us</Link>
-        <Link to="/contact">Contact Us</Link>
+        <div className="left-links">
+          <Link to="/">Home</Link>
+          <Link to="/route-suggestions">Route Suggestions</Link>
+          <Link to="/contact">Contact Us</Link>
+        </div>
+        <Link to="/login" className="login-link">Login</Link>
       </nav>
     </header>
   );
