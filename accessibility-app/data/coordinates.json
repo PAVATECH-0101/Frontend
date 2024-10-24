@@ -1,0 +1,58 @@
+import json
+import os
+
+# Get the base path dynamically
+base_path = os.path.dirname(os.path.abspath(__file__))
+geojson_path = os.path.join(base_path, '..', 'data', 'buildings.geojson')
+
+# Check if the file exists
+if not os.path.exists(geojson_path):
+    print(f"Error: The file {geojson_path} does not exist.")
+    exit(1)
+
+# Read and load the GeoJSON file
+try:
+    with open(geojson_path, 'r') as geojson_file:
+        content = geojson_file.read()
+        print(f"Content of the file:\n{content}")  # Print file content for debugging
+        geojson_data = json.loads(content)  # Parse the JSON content
+except FileNotFoundError:
+    print(f"Error: The file {geojson_path} does not exist.")
+    exit(1)
+except json.JSONDecodeError as e:
+    print(f"Error decoding JSON: {e} - Content was: '{content}'")
+    exit(1)
+
+# Proceed with extracting coordinates and properties
+coordinates_data = []
+
+for feature in geojson_data['features']:
+    coords = feature['geometry']['coordinates']
+    properties = feature['properties']
+    
+    # Print geometry and coordinates for debugging
+    print(f"Geometry Type: {feature['geometry']['type']}, Coordinates: {coords}")
+
+    if feature['geometry']['type'] == 'Point':
+        coord_entry = {'lat': coords[1], 'lon': coords[0]}  # Latitude is the second element
+    elif feature['geometry']['type'] in ['LineString', 'Polygon']:
+        coord_entry = {'lat': coords[0][1], 'lon': coords[0][0]}  # Use first coordinate
+    else:
+        print(f"Unsupported geometry type: {feature['geometry']['type']}")
+        continue  # Skip unsupported geometry types
+
+    # Create coordinate entry with properties
+    coordinate_entry = {
+        'coordinates': coord_entry,
+        'name': properties.get('name', 'Unnamed'),
+        'address': properties.get('address', 'No Address'),
+        'height': properties.get('height', 'Unknown')
+    }
+    coordinates_data.append(coordinate_entry)
+
+# Save the extracted data to coordinates.json
+output_path = os.path.join(base_path, '..', 'data', 'coordinates.json')
+with open(output_path, 'w') as coordinates_file:
+    json.dump(coordinates_data, coordinates_file, indent=2)
+
+print(f"Coordinates have been saved to {output_path}")
