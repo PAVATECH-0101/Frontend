@@ -14,6 +14,7 @@ const Header = () => {
           <Link to="/">Home</Link>
           <Link to="/route-suggestions">Route Suggestions</Link>
           <Link to="/contact">Contact Us</Link>
+          <Link to="/map">View Map</Link> {/* Added the link to the map here */}
         </div>
         <Link to="/login" className="login-link">Login</Link>
       </nav>
