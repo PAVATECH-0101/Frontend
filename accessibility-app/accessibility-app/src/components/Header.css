@@ -1,42 +1,90 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px;
-  background-color: #6E3640;
-  color: white;
-  align-items: center; /* Align items vertically */
-  font: semi-bold; /* Makes the text bold */
-  font-size: 16px; 
-}
-.logo-img {
-  width: 150px; /* Adjust this as needed */
-  height: 50px; /* Maintains the aspect ratio */
-  border-radius: 10px;
+  padding: 20px;
+  background-color: #6E3640; /* Header background color */
+  color: white; /* Text color */
+  align-items: center; /* Center items vertically */
+  font-weight: 500; /* Semi-bold font */
+  font-size: 16px; /* Font size */
+  position: relative; /* For positioning of dropdown */
 }
 
+.logo-img {
+  width: 150px; /* Logo width */
+  height: 50px; /* Logo height */
+  border-radius: 10px; /* Rounded corners for logo */
+}
 
 .nav-links {
-  display: flex;
-  align-items: center; /* Vertically center the items */
+  display: flex; /* Default display for desktop */
+  align-items: center; /* Vertically align links */
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition */
+  opacity: 0; /* Initially hidden */
+  max-height: 0; /* Initially collapsed */
+  overflow: hidden; /* Hide overflow */
+}
+
+.nav-links.active {
+  opacity: 1; /* Show links when active */
+  max-height: 500px; /* Adjust based on the height of the menu */
 }
 
 .nav-links a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: white;
+  margin: 0 15px; /* Space between links */
+  text-decoration: none; /* Remove underline */
+  color: white; /* Link color */
+  padding: 10px 0; /* Vertical padding for better click area */
 }
 
 .nav-links a:hover {
-  color: #dc2626;
+  color: #a12b2b; /* Hover color for links */
 }
 
 .nav-links .left-links {
-  display: flex;
-  gap: 15px; /* Adds space between left side links */
+  display: flex; /* Left side links */
+  gap: 15px; /* Space between left side links */
 }
 
 .nav-links .login-link {
   margin-left: auto; /* Pushes the login link to the far right */
-  padding-left: 50px; /* Adds a large gap between the last left link and Login */
+  padding-left: 50px; /* Space before login link */
 }
 
+/* Media Queries for small screens */
+@media (max-width: 768px) {
+  .nav-links {
+      display: flex; /* Change display to flex to utilize flex properties */
+      flex-direction: column; /* Stack links vertically */
+      position: absolute; /* Positioning for dropdown */
+      top: 70px; /* Adjust based on header height */
+      left: 0; /* Align to the left */
+      right: 0; /* Align to the right */
+      background-color: #6E3640; /* Background color for dropdown */
+      padding: 20px; /* Padding for dropdown */
+      z-index: 1000; /* Ensure dropdown is above other content */
+      opacity: 0; /* Initially hidden */
+      max-height: 0; /* Initially collapsed */
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition */
+  }
+
+  .nav-toggle {
+      display: block; /* Show the hamburger icon on mobile */
+      cursor: pointer; /* Change cursor to pointer */
+      font-size: 24px; /* Size of hamburger icon */
+      z-index: 1001; /* Ensure it's above other content */
+  }
+}
+
+/* Desktop view: hide the hamburger menu */
+@media (min-width: 769px) {
+  .nav-toggle {
+      display: none; /* Hide hamburger menu in desktop view */
+  }
+
+  .nav-links {
+      display: flex; /* Show the navigation links in desktop view */
+      max-height: none; /* Ensure no max-height limit in desktop */
+      opacity: 1; /* Ensure links are visible */
+  }
+}

@@ -3,7 +3,7 @@ import { GoogleMap, DirectionsRenderer, useLoadScript } from '@react-google-maps
 
 const mapContainerStyle = {
   width: '100%',
-  height: '400px',
+  height: '100vh', // Adjust as necessary
 };
 
 const MyMap = () => {
@@ -49,4 +49,15 @@ const MyMap = () => {
   );
 };
 
-export default MyMap;
+const App = () => (
+  <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <div style={{ flex: 1 }}>
+      <MyMap />
+    </div>
+    <div className="footer" style={{ height: '50px' }}>
+      {/* Footer content goes here */}
+    </div>
+  </div>
+);
+
+export default App;
