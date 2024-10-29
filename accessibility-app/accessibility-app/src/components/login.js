@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AiOutlineArrowRight } from 'react-icons/ai';
+import axios from 'axios';
 
 function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // Updated to point to the correct backend URL
+      const response = await axios.post('http://localhost:5000/login', { email, password });
+      if (response.status === 200) {
+        alert(response.data.message);
+        navigate('/dashboard'); // Redirect to dashboard on successful login
+      }
+    } catch (error) {
+      // Enhanced error handling
+      alert(error.response && error.response.data.message ? error.response.data.message : 'Unable to connect to the server. Please try again later.');
+    }
+  };
+
   return (
     <div
       className="login-container"
@@ -19,7 +39,7 @@ function Login() {
     >
       <div className="login-form" style={{ backgroundColor: 'rgba(255, 255, 255, 0.85)', padding: '40px', borderRadius: '10px' }}>
         <h1 className="login-title">Log in</h1>
-        <form>
+        <form onSubmit={handleSubmit}>
           <input 
             type="email" 
             id="email" 
@@ -27,6 +47,8 @@ function Login() {
             placeholder="Email Address" 
             required 
             className="input-field"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input 
             type="password" 
@@ -35,6 +57,8 @@ function Login() {
             placeholder="Password" 
             required 
             className="input-field"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <button 
             className="submit-btn"
