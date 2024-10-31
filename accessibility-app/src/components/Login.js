@@ -15,12 +15,15 @@ function Login() {
       // Updated to point to the correct backend URL
       const response = await axios.post('http://localhost:5000/login', { email, password });
       if (response.status === 200) {
-        alert(response.data.message);
+        alert(response.data.message); // Show success message
         navigate('/dashboard'); // Redirect to dashboard on successful login
       }
     } catch (error) {
       // Enhanced error handling
-      alert(error.response && error.response.data.message ? error.response.data.message : 'Unable to connect to the server. Please try again later.');
+      const errorMessage = error.response && error.response.data.message 
+        ? error.response.data.message 
+        : 'Unable to connect to the server. Please try again later.';
+      alert(errorMessage);
     }
   };
 
@@ -70,13 +73,13 @@ function Login() {
 
         <div className="social-login">
           <Link to="/activation">
-            <img src={`${process.env.PUBLIC_URL}/images/google.png`} alt="google" className="social-icon" />
+            <img src={`${process.env.PUBLIC_URL}/images/google.png`} alt="Google" className="social-icon" />
           </Link>
           <Link to="/activation">
-            <img src={`${process.env.PUBLIC_URL}/images/facebook.jpg`} alt="facebook" className="social-icon" />
+            <img src={`${process.env.PUBLIC_URL}/images/facebook.jpg`} alt="Facebook" className="social-icon" />
           </Link>
           <Link to="/activation">
-            <img src={`${process.env.PUBLIC_URL}/images/apple.png`} alt="apple" className="social-icon" />
+            <img src={`${process.env.PUBLIC_URL}/images/apple.png`} alt="Apple" className="social-icon" />
           </Link>
         </div>
 

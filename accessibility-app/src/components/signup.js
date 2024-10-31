@@ -28,7 +28,9 @@ function SignUp() {
         navigate('/login'); // Redirect to login page on successful sign-up
       }
     } catch (error) {
-      alert(error.response && error.response.data.message ? error.response.data.message : 'Sign up failed');
+      alert(error.response && error.response.data.message 
+        ? error.response.data.message 
+        : 'Sign up failed. Please try again later.');
     }
   };
 
@@ -45,7 +47,7 @@ function SignUp() {
         alignItems: 'center',
       }}
     >
-      <div className="login-form">
+      <div className="login-form" style={{ backgroundColor: 'rgba(255, 255, 255, 0.85)', padding: '40px', borderRadius: '10px' }}>
         <h1 className="login-title">Sign Up</h1>
         <form onSubmit={handleSubmit}>
           <input 
@@ -95,13 +97,13 @@ function SignUp() {
 
         <div className="social-login">
           <Link to="/activation">
-            <img src={`${process.env.PUBLIC_URL}/images/google.png`} alt="google" className="social-icon" />
+            <img src={`${process.env.PUBLIC_URL}/images/google.png`} alt="Sign in with Google" className="social-icon" />
           </Link>
           <Link to="/activation">
-            <img src={`${process.env.PUBLIC_URL}/images/facebook.jpg`} alt="facebook" className="social-icon" />
+            <img src={`${process.env.PUBLIC_URL}/images/facebook.jpg`} alt="Sign in with Facebook" className="social-icon" />
           </Link>
           <Link to="/activation">
-            <img src={`${process.env.PUBLIC_URL}/images/apple.png`} alt="apple" className="social-icon" />
+            <img src={`${process.env.PUBLIC_URL}/images/apple.png`} alt="Sign in with Apple" className="social-icon" />
           </Link>
         </div>
 

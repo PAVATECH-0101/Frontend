@@ -10,6 +10,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleSearch = async () => {
+    // Validate input
     if (!destination) {
       setErrorMessage('Please enter a destination.');
       return;
@@ -20,7 +21,7 @@ const Home = () => {
 
     try {
       const response = await axios.get(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${destination}&key=${process.env.REACT_APP_API_KEY}`
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(destination)}&key=${process.env.REACT_APP_API_KEY}`
       );
 
       console.log('API Response:', response.data);
@@ -78,11 +79,10 @@ const Home = () => {
             placeholder="Enter your destination"
             className="input-field"
           />
-          <button onClick={handleSearch} className="search-button">
-            Find Routes
+          <button onClick={handleSearch} className="search-button" disabled={loading}>
+            {loading ? 'Finding Routes...' : 'Find Routes'}
           </button>
 
-          {loading && <p>Loading...</p>}
           {errorMessage && <p className="error-message">{errorMessage}</p>}
         </div>
       </div>

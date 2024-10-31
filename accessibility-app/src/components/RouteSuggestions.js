@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './RouteSuggestions.css'; // Assuming we will style the suggestions
 
-const RouteSuggestions = ({ destination }) => { // Accept destination as a prop
+const RouteSuggestions = ({ destination }) => {
   const [routes, setRoutes] = useState([]);
   const [loading, setLoading] = useState(true); // State for loading
   const [error, setError] = useState(null); // State for error
@@ -10,9 +10,14 @@ const RouteSuggestions = ({ destination }) => { // Accept destination as a prop
   useEffect(() => {
     const fetchRoutes = async () => {
       try {
-        // Include the destination in your API call and use the API key from environment variables
-        const response = await axios.get(`/api/route-suggestions?destination=${destination}&apiKey=${process.env.REACT_APP_API_KEY}`);
-        setRoutes(response.data);
+        // Make sure to set the correct API endpoint and include your API key
+        const response = await axios.get(`/api/route-suggestions`, {
+          params: {
+            destination,
+            apiKey: process.env.REACT_APP_API_KEY,
+          },
+        });
+        setRoutes(response.data.routes); // Adjust according to your API response structure
       } catch (error) {
         console.error('Error fetching route suggestions', error);
         setError('Failed to fetch route suggestions. Please try again later.');
@@ -37,8 +42,8 @@ const RouteSuggestions = ({ destination }) => { // Accept destination as a prop
         <ul className="route-list">
           {routes.map((route, index) => (
             <li key={index} className="route-item">
-              <p>Distance: {route.distance}</p>
-              <p>Duration: {route.duration}</p>
+              <p>Distance: {route.distance} km</p> {/* Assuming distance is in kilometers */}
+              <p>Duration: {route.duration} mins</p> {/* Assuming duration is in minutes */}
               {/* Display additional route information here if available */}
             </li>
           ))}
