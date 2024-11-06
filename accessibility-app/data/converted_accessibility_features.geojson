@@ -1,0 +1,595 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-11-06T12:12:40Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/28243957",
+        "addr:city": "Nairobi",
+        "addr:street": "Ring Road Parklands",
+        "alt_name": "Visa Oshwal Community Centre",
+        "amenity": "place_of_worship",
+        "building": "yes",
+        "check_date": "2023-05-17",
+        "denomination": "hindu",
+        "ele": "4",
+        "name": "Oshwal Religious Centre",
+        "religion": "hindu",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8056385,
+          -1.2599291
+        ]
+      },
+      "id": "way/28243957"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/40925985",
+        "addr:city": "Nairobi",
+        "addr:street": "City Hall Way",
+        "brand": "InterContinental",
+        "brand:wikidata": "Q1825730",
+        "building": "yes",
+        "building:levels": "10",
+        "internet_access": "yes",
+        "name": "InterContinental Hotel",
+        "stars": "5",
+        "tourism": "hotel",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8193004,
+          -1.2879144
+        ]
+      },
+      "id": "way/40925985"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/105267053",
+        "addr:city": "Nairobi",
+        "addr:housenumber": "59857",
+        "addr:postcode": "00200",
+        "amenity": "university",
+        "building": "yes",
+        "name": "Strathmore Law School",
+        "operator": "Strathmore University",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8140362,
+          -1.3106047
+        ]
+      },
+      "id": "way/105267053"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/113187448",
+        "addr:city": "Nairobi",
+        "addr:street": "Tubman Road",
+        "amenity": "restaurant",
+        "building": "yes",
+        "diet:vegetarian": "yes",
+        "level": "0",
+        "name": "Bridges Organic Restaurant",
+        "wheelchair": "no",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8189084,
+          -1.2834125
+        ]
+      },
+      "id": "way/113187448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/123415699",
+        "addr:city": "Nairobi",
+        "addr:postcode": "00100",
+        "addr:street": "Mama Ngina Street",
+        "atm": "yes",
+        "brand": "Hilton",
+        "brand:wikidata": "Q598884",
+        "brand:wikipedia": "en:Hilton Hotels & Resorts",
+        "building": "yes",
+        "building:levels": "16",
+        "contact:facebook": "https://www.facebook.com/Hilton.hotels.resorts.Nairobi",
+        "contact:linkedin": "https://ke.linkedin.com/company/hilton-hotel-city-centre-nairobi-county-kenya",
+        "contact:pinterest": "https://www.pinterest.co.uk/nairobihilton/",
+        "contact:twitter": "https://twitter.com/hiltonnairobi",
+        "email": "nairobi_info@hilton.com",
+        "internet_access": "wlan",
+        "name": "Hilton",
+        "operator": "Hilton Hotels",
+        "phone": "+254 20 2288000",
+        "rooms": "287",
+        "smoking": "isolated",
+        "stars": "4",
+        "tourism": "hotel",
+        "website": "https://www.hilton.com/en/hotels/nbohitw-hilton-nairobi/",
+        "wheelchair": "yes",
+        "wikidata": "Q10524043",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8244697,
+          -1.2854352
+        ]
+      },
+      "id": "way/123415699"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/123617546",
+        "addr:city": "Nairobi",
+        "addr:housenumber": "30450",
+        "addr:postcode": "00100",
+        "addr:street": "1st Ngong Avenue",
+        "building": "yes",
+        "building:levels": "14",
+        "building:material": "stone",
+        "name": "Ardhi House",
+        "roof:colour": "grey",
+        "smoking": "no",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8118999,
+          -1.2929564
+        ]
+      },
+      "id": "way/123617546"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/125107771",
+        "addr:city": "Nairobi",
+        "addr:street": "Murang'a Road",
+        "brand": "Best Western Plus",
+        "brand:wikidata": "Q830334",
+        "building": "yes",
+        "building:levels": "9",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "name": "Best Western Plus Meridian",
+        "tourism": "hotel",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.821534,
+          -1.2807702
+        ]
+      },
+      "id": "way/125107771"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/130231611",
+        "addr:city": "Nairobi",
+        "addr:street": "Ngara Road",
+        "amenity": "restaurant",
+        "building": "yes",
+        "check_date": "2024-09-05",
+        "cuisine": "regional",
+        "diet:vegetarian": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Hacienda Sports Bar & Grill",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8203258,
+          -1.2740609
+        ]
+      },
+      "id": "way/130231611"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/210215275",
+        "addr:city": "Buru buru",
+        "addr:street": "Kikwata Crescent",
+        "amenity": "place_of_worship",
+        "building": "yes",
+        "denomination": "catholic",
+        "name": "Holy Trinity Church",
+        "religion": "christian",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8751007,
+          -1.2763547
+        ]
+      },
+      "id": "way/210215275"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/224515597",
+        "building": "school",
+        "fee": "no",
+        "operator": "school",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8698022,
+          -1.2542429
+        ]
+      },
+      "id": "way/224515597"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238852394",
+        "addr:city": "Nairobi",
+        "addr:housenumber": "15",
+        "addr:street": "Mwanzi Road",
+        "alt_name": "Westgate Mall",
+        "building": "yes",
+        "building:levels": "4",
+        "name": "Westgate Shopping Mall",
+        "name:it": "Westgate",
+        "phone": "+254 722 003272",
+        "shop": "mall",
+        "website": "https://www.westgate.co.ke/",
+        "wheelchair": "yes",
+        "wikidata": "Q13125208",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8031163,
+          -1.2570402
+        ]
+      },
+      "id": "way/238852394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/247373432",
+        "addr:city": "Nairobi",
+        "addr:street": "Milimani Road",
+        "building": "yes",
+        "check_date": "2024_09",
+        "email": "reservations@heronhotel.com",
+        "fax": "+254-020 272 1698",
+        "internet_access": "yes",
+        "internet_access:fee": "no",
+        "name": "The Heron Hotel",
+        "operator": "Sarovar Hotels India",
+        "phone": "+254-020-272 0740, 272 0741, 272 0742, 272 0743, 235 0401, 235 0402",
+        "smoking": "dedicated",
+        "stars": "4",
+        "tourism": "hotel",
+        "website": "https://www.sarovarhotels.com/the-heron-portico-nairobi/",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.807038,
+          -1.2889985
+        ]
+      },
+      "id": "way/247373432"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/499873616",
+        "building": "train_station",
+        "name": "Nairobi Central Railway Station",
+        "public_transport": "station",
+        "railway": "station",
+        "toilets:wheelchair": "no",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q6959799",
+        "wikipedia": "en:Nairobi railway station",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8285594,
+          -1.2916496
+        ]
+      },
+      "id": "way/499873616"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/697756756",
+        "addr:city": "Nairobi",
+        "addr:street": "Tubman Road",
+        "building": "yes",
+        "check_date": "2024-09-05",
+        "name": "Embassy",
+        "tourism": "hotel",
+        "wheelchair": "no",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8190343,
+          -1.2833908
+        ]
+      },
+      "id": "way/697756756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/792855253",
+        "amenity": "hospital",
+        "building": "hospital",
+        "check_date": "2023-04-18",
+        "dispensing": "yes",
+        "electricity": "grid",
+        "health_amenity:type": "laboratory",
+        "healthcare": "hospital",
+        "healthcare:speciality": "community;general",
+        "name": "Vostrum Clinic,Kibera Branch",
+        "opening_hours": "Sa-Su 08:00-08:30",
+        "operational_status": "operational",
+        "operator:type": "private",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7811431,
+          -1.3078069
+        ]
+      },
+      "id": "way/792855253"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/882824218",
+        "building": "apartments",
+        "building:flats": "0",
+        "building:levels": "6",
+        "name": "Millvalley Apartments",
+        "wheelchair": "no",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8859544,
+          -1.2075434
+        ]
+      },
+      "id": "way/882824218"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1060514802",
+        "addr:housenumber": "Cafeteria",
+        "amenity": "restaurant",
+        "building": "yes",
+        "building:levels": "1",
+        "building:material": "stone",
+        "check_date": "2022-08-29",
+        "cuisine": "international",
+        "operator": "AFEX",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "roof:shape": "hipped",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7216495,
+          -1.2686567
+        ]
+      },
+      "id": "way/1060514802"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1060547286",
+        "air_conditioning": "no",
+        "building": "yes",
+        "building:levels": "2",
+        "check_date": "2023-07-04",
+        "internet_access": "yes",
+        "internet_access:fee": "customers",
+        "name": "ILRI Hostel",
+        "operator": "International Livestock Research Institute",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "rooms": "10",
+        "tourism": "hostel",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7220103,
+          -1.2676613
+        ]
+      },
+      "id": "way/1060547286"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1063806354",
+        "addr:street": "Kairu Road",
+        "building": "yes",
+        "building:levels": "3",
+        "name": "St. Peter Hospital",
+        "name:en": "St. Peter Hospital",
+        "roof:shape": "flat",
+        "smoking": "no",
+        "source": "local knowledge",
+        "wheelchair": "no",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.9137618,
+          -1.2205331
+        ]
+      },
+      "id": "way/1063806354"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1066010077",
+        "building": "yes",
+        "building:material": "cement_block",
+        "name": "Chemist/Pharmacy",
+        "roof:shape": "flat",
+        "smoking": "no",
+        "source": "local knowledge",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.9144588,
+          -1.2214532
+        ]
+      },
+      "id": "way/1066010077"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1079002461",
+        "amenity": "place_of_worship",
+        "building": "church",
+        "denomination": "seventh_day_adventist",
+        "name": "Upperhill Springs S.D.A",
+        "opening_hours": "Sa 07:00-23:15; PH open",
+        "religion": "christian",
+        "service_times": "Sa 08:00-18:00; PH open",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8213487,
+          -1.3038911
+        ]
+      },
+      "id": "way/1079002461"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1098773839",
+        "amenity": "pharmacy",
+        "building": "yes",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "Pharmaplus Pharmacies",
+        "opening_hours": "Mo-Fr 08:00-21:30; PH open",
+        "operator": "Private",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7861004,
+          -1.2599443
+        ]
+      },
+      "id": "way/1098773839"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4111164189",
+        "addr:street": "Ndemi Road",
+        "amenity": "place_of_worship",
+        "building": "church",
+        "denomination": "evangelical",
+        "name": "Pneuma ministries international",
+        "opening_hours": "Tu-Fr 08:00-17:00; Su 08:00-13:00",
+        "religion": "christian",
+        "service_times": "Descipleship classes 09:00-10:30 Main service 10:45-13:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7774627,
+          -1.2968634
+        ]
+      },
+      "id": "node/4111164189"
+    }
+  ]
+}
